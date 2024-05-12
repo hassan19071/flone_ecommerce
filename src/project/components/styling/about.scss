@@ -1,0 +1,30 @@
+@use "./variables.scss" as *;
+.about {
+  .head {
+    h2 {
+      @include sectionTitle();
+    }
+    p {
+      width: 60%;
+      margin: 30px auto;
+      font-size: 16px;
+      @media (max-width: 976px) {
+        width: 100%;
+      }
+    }
+  }
+  .plans {
+    .img {
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      padding: 40px 0 20px;
+      h4 {
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+  }
+}

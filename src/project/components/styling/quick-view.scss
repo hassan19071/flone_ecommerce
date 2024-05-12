@@ -1,0 +1,86 @@
+@use "./variables.scss" as *;
+
+.quick-views {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8;
+  background-color: #0000006d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  .product-detailss {
+    width: 700px;
+    background-color: #fff;
+    padding: 30px 20px;
+    margin: auto;
+    overflow: auto !important;
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 400px;
+    }
+    .imgs {
+      .main-img {
+        img {
+          width: 100%;
+          height: 200px;
+        }
+      }
+      .other {
+        img {
+          width: calc(100% / 3 - 10px);
+          cursor: pointer;
+          height: 100px;
+          &:nth-child(2) {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+    .details {
+      h5 {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 15px;
+      }
+      .qty {
+        display: flex;
+        div {
+          background-color: #eee;
+          padding: 5px 10px;
+          font-size: 15px;
+          user-select: none;
+          svg {
+            font-size: 15px;
+          }
+          &:not(:nth-child(2)) {
+            cursor: pointer;
+          }
+        }
+        button {
+          padding: 5px 20px;
+          border: 1px solid $main_color;
+          outline: none;
+          font-size: 14px;
+          background-color: $main_color;
+          color: #fff;
+        }
+      }
+    }
+    .adds {
+      div {
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          color: $main_color;
+        }
+      }
+    }
+  }
+}

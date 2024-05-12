@@ -1,0 +1,23 @@
+@use "./variables.scss" as *;
+.deal-products {
+  .head {
+    h2 {
+      @include sectionTitle();
+    }
+    ul {
+      li {
+        margin: 0 10px;
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: #555;
+        transition: 0.3s;
+        cursor: pointer;
+        &.active,
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@use "./variables.scss" as *;
+
+.product-details {
+  .imgs {
+    .main-img {
+      img {
+        height: 400px;
+      }
+    }
+    .other {
+      overflow-x: auto;
+      img {
+        width: calc(100% / 4 - 15px);
+        cursor: pointer;
+        height: 100px;
+        &:nth-child(2) {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+  .details {
+    h5 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+    }
+    .price {
+      span {
+        color: #c43a3a;
+      }
+      font-size: 25px;
+    }
+    .rating {
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    .more-about {
+      h5 {
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+      }
+    }
+    .selects {
+      label {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      select {
+        width: 400px;
+        font-size: 15px;
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+        color: #333;
+        border: 1px solid #f4eded;
+        outline: none;
+        padding: 6px 10px;
+        &:focus {
+          border-color: $main_color;
+        }
+      }
+    }
+    .qty {
+      display: flex;
+      div {
+        background-color: #eee;
+        padding: 5px 10px;
+        width: 40px;
+        font-size: 15px;
+        user-select: none;
+        svg {
+          font-size: 15px;
+        }
+        &:not(:nth-child(2)) {
+          cursor: pointer;
+        }
+      }
+      button {
+        padding: 5px 20px;
+        border: 1px solid $main_color;
+        outline: none;
+        font-size: 15px;
+        background-color: $main_color;
+        color: #fff;
+      }
+    }
+  }
+  .adds {
+    div {
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        color: $main_color;
+      }
+    }
+  }
+}

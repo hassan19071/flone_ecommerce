@@ -1,0 +1,60 @@
+@use "./variables.scss" as *;
+
+.contact {
+  .contact-form {
+    .contact-details {
+      background-color: #eee;
+      padding: 40px 30px;
+      height: 100%;
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      h5 {
+        font-size: 18px;
+        margin-bottom: 0;
+        width: 100px;
+      }
+      a,
+      span {
+        font-size: 17px;
+        color: #444;
+      }
+    }
+    .form {
+      background-color: #eee;
+      padding: 40px 30px;
+      form {
+        label {
+          font-size: 15px;
+          font-weight: 600;
+        }
+        input,
+        textarea {
+          background-color: #ffffff;
+          border: 1.5px solid transparent !important;
+          box-shadow: none !important;
+          outline: none !important;
+          border-radius: 0;
+          &:focus {
+            border: 1.5px solid $main_color !important;
+          }
+        }
+        button {
+          width: 100%;
+          background-color: #000;
+          color: #fff;
+          padding: 15px 10px;
+          border: none;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          transition: 0.3s;
+          &:hover {
+            background-color: $main_color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use "./variables.scss" as *;
+.no-page {
+  .error {
+    h1 {
+      font-size: calc(40px + 3vw);
+      color: $main_color;
+    }
+    h3 {
+      margin: 40px 0 6px;
+    }
+    p {
+      width: 60%;
+      margin: auto;
+      @media (max-width: 967px) {
+        width: 100%;
+      }
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    a {
+      padding: 10px 30px;
+      background-color: $main_color;
+      color: #fff;
+      transition: 0.3s;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}

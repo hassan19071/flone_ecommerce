@@ -1,0 +1,183 @@
+@use "./variables.scss" as *;
+.account {
+  .accordion-item {
+    h2 {
+      button {
+        background-color: rgb(248, 243, 250);
+        box-shadow: none;
+        padding: 15px 20px;
+        text-transform: uppercase;
+      }
+    }
+    .accordion-body {
+      padding: 30px;
+      .head {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+      form {
+        margin-top: 20px;
+        label {
+          font-weight: 600;
+          font-size: 15px;
+        }
+        .form-control {
+          box-shadow: none;
+          &:focus {
+            border-color: $main_color;
+          }
+        }
+        button {
+          background-color: rgb(248, 243, 250);
+          transition: 0.2s;
+          padding: 8px 12px;
+          text-transform: uppercase;
+          color: #222;
+          border: none;
+          font-size: 14px;
+          &:hover {
+            background-color: $main_color;
+            color: #fff;
+          }
+        }
+      }
+      .address {
+        border: 1px solid #eee;
+        width: fit-content;
+        margin: 30px auto;
+        padding: 30px;
+        button {
+          margin-top: 20px;
+          border: none;
+          color: #fff;
+          padding: 5px 20px;
+          font-size: 13px;
+          transition: 0.3s;
+          &:hover {
+            background-color: $main_color !important;
+          }
+          &.edit {
+            background-color: #000;
+          }
+          &.delete {
+            background-color: #a91515;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login {
+  .login-form {
+    font-size: 16px;
+    width: 450px;
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px;
+    form {
+      div {
+        > div {
+          label {
+            font-size: 15px;
+            font-weight: 600;
+          }
+          input {
+            background-color: #ffffff;
+            border: 1px solid #cfcbcb !important;
+            box-shadow: none !important;
+            outline: none !important;
+            padding: 6px 10px;
+            border-radius: 0;
+            &:focus {
+              border: 1px solid $main_color !important;
+            }
+          }
+          button,
+          a.link {
+            &:disabled {
+              opacity: 0.6;
+              &:hover {
+                background-color: $main_color;
+              }
+            }
+            width: 100%;
+            background-color: $main_color;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+            &:hover {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+          a.link {
+            &.create {
+              background-color: #000;
+              color: #fff;
+              &:hover {
+                background-color: rgb(248, 243, 250);
+                color: #504f4f;
+              }
+            }
+            &.forget {
+              background-color: rgb(248, 243, 250);
+              color: #504f4f;
+              &:hover {
+                background-color: #000;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .msg {
+    width: 450px;
+    margin: 20px auto;
+    background-color: #dd343446;
+    padding: 6px 10px;
+    font-size: 15px;
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+    .x {
+      cursor: pointer;
+    }
+  }
+  .spinner-border {
+    height: 10px;
+    width: 10px;
+  }
+  .accepted-msg {
+    p {
+      font-size: 14px;
+      a {
+        font-weight: 600;
+        color: #222;
+        transition: 0.2s;
+        &:hover {
+          color: $main_color;
+        }
+      }
+    }
+  }
+}

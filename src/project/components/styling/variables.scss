@@ -1,0 +1,30 @@
+$main_color: #a749ff;
+
+@mixin sectionTitle() {
+  width: fit-content;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: calc(18px + 1vw);
+  font-weight: 600;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%) translateX(100%);
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+  }
+}

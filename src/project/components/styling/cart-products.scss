@@ -1,0 +1,219 @@
+@use "./variables.scss" as *;
+
+.cart-products {
+  .table {
+    overflow-x: auto;
+  }
+  table {
+    overflow-x: auto;
+    border: 1px solid #eee;
+    @media (max-width: 991px) {
+      width: 900px !important;
+    }
+    tr {
+      border-bottom: 1px solid #eee;
+      td {
+        padding: 10px 0;
+        .grand {
+          color: $main_color;
+          font-weight: bold;
+          padding: 6px 20px;
+          font-size: 18px;
+          span {
+            color: #474646;
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    thead {
+      th {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 15px;
+      }
+      tr {
+        background-color: #eee !important;
+      }
+    }
+    tbody {
+      img {
+        width: 100px !important;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .qty {
+        display: flex;
+        div {
+          background-color: #eee;
+          padding: 5px 10px;
+          font-size: 16px;
+          user-select: none;
+          width: 40px;
+          svg {
+            font-size: 10px;
+          }
+          &:not(:nth-child(2)) {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .actions {
+      svg {
+        color: #333;
+        font-size: 17px;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+          color: $main_color;
+        }
+      }
+    }
+  }
+  .cart-procces {
+    background-color: #eee;
+    padding: 20px;
+    width: 100%;
+    margin: 30px auto;
+    form {
+      input {
+        background-color: #ffffff;
+        border: 1px solid transparent !important;
+        box-shadow: none !important;
+        outline: none !important;
+        border-radius: 0;
+        padding: 8px 6px;
+        font-size: 15px;
+        &::placeholder {
+          font-size: 15px;
+        }
+        &:focus {
+          border: 1px solid $main_color !important;
+        }
+      }
+      button {
+        background-color: $main_color;
+        border: 1px solid transparent !important;
+        padding: 8px 6px;
+        font-size: 15px;
+        color: #fff;
+        transition: 0.2s;
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+    .checkout,
+    .clear {
+      padding: 8px 20px;
+      background-color: $main_color;
+      color: #fff;
+      font-size: 15px;
+      transition: 0.2s;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      @media (max-width: 676px) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    .clear {
+      &:hover {
+        background-color: #000;
+      }
+    }
+    .checkout {
+      background-color: #000;
+      display: inline-block;
+      text-align: center;
+      &:hover {
+        background-color: $main_color;
+      }
+    }
+  }
+  .add-to-cart {
+    button {
+      padding: 6px 12px;
+      background-color: $main_color;
+      color: #fff;
+      font-size: 13px;
+      transition: 0.2s;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+.compare-products {
+  .table {
+    width: 100% !important;
+  }
+  th {
+    font-size: 15px;
+    width: 200px;
+    color: #555;
+  }
+  th,
+  td {
+    border: 1px solid #eee;
+  }
+  td {
+    min-width: 300px;
+  }
+  .product-img {
+    img {
+      width: 100px;
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      padding: 0 15px;
+    }
+  }
+  p.description {
+    font-size: 15px;
+    padding: 5px 15px;
+  }
+  .price {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .stock {
+    font-size: 15px;
+    color: #30a014;
+    font-weight: 700;
+    &.no {
+      color: #be3535;
+    }
+  }
+}
+.wishlist-products {
+  .btns {
+    flex-wrap: wrap;
+    a,
+    button {
+      padding: 10px 15px;
+      margin-top: 20px;
+      border: 1px solid #333;
+      background-color: transparent;
+      color: #222;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: 0.2s;
+      &:hover {
+        background-color: $main_color;
+        color: #fff;
+        border-color: $main_color;
+      }
+    }
+  }
+}

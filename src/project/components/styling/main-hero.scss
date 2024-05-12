@@ -1,0 +1,41 @@
+@use "./variables.scss" as *;
+.main-hero {
+  background-color: rgb(242, 226, 249);
+  padding-top: 40px;
+  min-height: 400px;
+  .hero-text {
+    h3 {
+      font-size: 26px;
+      text-transform: capitalize;
+      font-weight: 600;
+      color: #000;
+    }
+    h1 {
+      font-size: 5vw;
+      margin: 10px 0 40px;
+      @media (max-width: 676px) {
+        font-size: 6vw;
+      }
+      font-weight: 400;
+    }
+    a {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 16px;
+      border: 1px solid #333;
+      color: #333;
+      padding: 10px 20px;
+      transition: 0.2s;
+      &:hover {
+        background-color: $main_color;
+        color: #fff;
+        border-color: $main_color;
+      }
+    }
+  }
+  .hero-img {
+    img {
+      width: 100%;
+    }
+  }
+}

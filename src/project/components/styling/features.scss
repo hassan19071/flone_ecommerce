@@ -1,0 +1,46 @@
+.features {
+  .feature {
+    &:hover {
+      img {
+        animation: scale 0.2s linear;
+        @keyframes scale {
+          0% {
+            transform: scale(1.2) rotate(20deg);
+          }
+          20% {
+            transform: scale(1.1) rotate(0deg);
+          }
+          40% {
+            transform: scale(1.2) rotate(20deg);
+          }
+          60% {
+            transform: scale(1.1) rotate(0deg);
+          }
+          80% {
+            transform: scale(1.2) rotate(20deg);
+          }
+          100% {
+            transform: scale(1.1) rotate(0deg);
+          }
+        }
+      }
+    }
+    .img {
+      img {
+        width: 50px;
+        transition: 0.3s;
+      }
+    }
+    .text {
+      h5 {
+        font-size: 19px;
+        text-transform: capitalize;
+        font-weight: 500;
+        color: #444;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
